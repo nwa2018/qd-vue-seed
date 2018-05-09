@@ -1,0 +1,20 @@
+flexCenter()
+  display flex
+  justify-content center
+  align-items center
+
+h(height)
+  if unit(height) != ''
+    height height
+  else
+    height unit(height, px)
+
+w(width)
+  if unit(width) != ''
+    width width
+  else
+    width unit(width, px)
+
+wh(width, height)
+  w(width)
+  h(height)
