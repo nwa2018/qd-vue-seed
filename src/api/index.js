@@ -2,5 +2,5 @@ import axios from 'axios'
 import { memoize } from 'ramda'
 
 export default {
-  getProductList: memoize(_ => axios('http://rapapi.org/mockjsdata/33304/manage/product/list.do').then(rsp => rsp.data))
+  getProductList: memoize(_ => axios('http://127.0.0.1:7998/pkReadApi/1710YearGrandCeremony2').then(rsp => rsp.data))
 }

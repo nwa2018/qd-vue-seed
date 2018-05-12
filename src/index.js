@@ -1,6 +1,6 @@
 import 'promise-polyfill/src/polyfill'
 import Vue from 'vue'
-import index from '@/pages/index'
+import App from './main'
 import router from '@/router'
 import store from '@/store'
 import '@/assets/style/index'
@@ -8,5 +8,5 @@ import '@/assets/style/index'
 new Vue({
   router,
   store,
-  ...index
+  ...App
 }).$mount('#app')

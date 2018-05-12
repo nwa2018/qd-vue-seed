@@ -1,9 +1,9 @@
 <template lang='pug'>
 .list
-  .list_item(v-for='v in list')
-    .list_item_id {{v.id}}
-    img.list_item_img(:src='v.mainImage')
-    .list_item_name.ell {{v.name}}
+  .list_item(v-for='(v, i) in list')
+    .list_item_id {{i + 1}}
+    .list_item_img {{v.name}}
+    .list_item_name.ell {{v.noble_title_id}}
 </template>
 
 <script>
@@ -18,7 +18,7 @@ export default {
   },
   async created () {
     const rsp = await api.getProductList()
-    this.list = rsp.data.list
+    this.list = rsp.data
   }
 }
 </script>
